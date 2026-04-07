@@ -1,5 +1,5 @@
 /* ========================================
-   LENS - メンズエステ渋谷 レンズ
+   INS - メンズエステ渋谷 インズ
    Design: 情報設計重視・削ぎ落としたナチュラル
    ======================================== */
 
@@ -93,7 +93,7 @@ img { max-width: 100%; height: auto; display: block; }
   min-height: 100vh; display: flex; align-items: center; justify-content: center;
   text-align: center;
   /* ▼ 背景画像：images/common/hero.jpg を差し替えてください */
-  background: url('images/common/hero.jpg') center center / cover no-repeat;
+  background: url('images/common/hero.png') center center / cover no-repeat;
   padding: var(--header-h) 20px 0;
   position: relative;
 }
