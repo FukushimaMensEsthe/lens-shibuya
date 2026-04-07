@@ -92,20 +92,27 @@ img { max-width: 100%; height: auto; display: block; }
 .hero {
   min-height: 100vh; display: flex; align-items: center; justify-content: center;
   text-align: center;
-  background: linear-gradient(160deg, #ddd5ca 0%, #c8bfb2 60%, #b5ab9d 100%);
+  /* ▼ 背景画像：images/common/hero.jpg を差し替えてください */
+  background: url('images/common/hero.jpg') center center / cover no-repeat;
   padding: var(--header-h) 20px 0;
+  position: relative;
 }
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(44,40,37,.45);
+}
+.hero-content { position: relative; z-index: 1; }
 
 .hero-label {
   font-family: var(--font-en); font-size: .8rem; letter-spacing: .3em;
-  color: var(--c-text-2); margin-bottom: 16px;
+  color: rgba(255,255,255,.7); margin-bottom: 16px;
 }
 .hero-title {
   font-family: var(--font-en); font-size: clamp(3rem, 9vw, 5rem);
-  font-weight: 500; letter-spacing: .2em; color: var(--c-text); margin-bottom: 20px;
+  font-weight: 500; letter-spacing: .2em; color: #fff; margin-bottom: 20px;
 }
 .hero-concept {
-  font-size: 1rem; letter-spacing: .16em; color: var(--c-text); font-weight: 300;
+  font-size: 1rem; letter-spacing: .16em; color: rgba(255,255,255,.9); font-weight: 300;
   margin-bottom: 48px;
 }
 
@@ -115,9 +122,9 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .hero-tel-num {
   font-family: var(--font-en); font-size: 1.6rem; font-weight: 500;
-  letter-spacing: .08em; color: var(--c-text);
+  letter-spacing: .08em; color: #fff;
 }
-.hero-tel-note { font-size: .7rem; color: var(--c-text-2); }
+.hero-tel-note { font-size: .7rem; color: rgba(255,255,255,.6); }
 .hero-btn {
   display: inline-block; background: var(--c-line); color: #fff;
   padding: 10px 40px; border-radius: 4px; font-size: .85rem; font-weight: 500;
